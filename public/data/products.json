@@ -1,0 +1,67 @@
+[
+	{
+	  "id": "p1",
+	  "name": "Wireless SmartWatch",
+	  "slug": "wireless-snartchwatch",
+	  "price": 89.99,
+	  "image": "/smartwatch1.webp",
+	  "description": "High-quality wireless smartwatch with noise-cancellation and long battery life."
+	},
+	{
+	  "id": "p2",
+	  "name": "Smart Watch",
+	  "slug": "smart-watch",
+	  "price": 149.99,
+	  "image": "/smartwatch12.jpeg",
+	  "description": "Track your fitness, health, and notificqations with this sleek smart watch."
+	},
+	{
+	  "id": "p3",
+	  "name": "Bluetooth Speaker",
+	  "slug": "bluetooth-speaker",
+	  "price": 59.99,
+	  "image": "/MIATONE QBOX - 16W Bluetooth Speaker IP67 Waterproof Speaker with Deep Bass.jpeg",
+	  "description": "Portable Bluetooth speaker with rich bass and crystal-clear sound."
+	},
+	{
+	  "id": "p4",
+	  "name": "4K Drone",
+	  "slug": "4k-drone",
+	  "price": 299.99,
+	  "image": "/drones.jpeg",
+	  "description": "Capture stunning aerial footage with this compact 4K drone."
+	},
+	{
+	  "id": "p5",
+	  "name": "Gaming Mouse",
+	  "slug": "gaming-mouse",
+	  "price": 39.99,
+	  "image": "/…gaming-mouse.jpeg",
+	  "description": "Ergonomic gaming mouse with customizable buttons and RGB lighting."
+	},
+	{
+	  "id": "p6",
+	  "name": "Mechanical Keyboard",
+	  "slug": "mechanical-keyboard",
+	  "price": 79.99,
+	  "image": "/Gaming Keyboard….jpeg",
+	  "description": "Tactile mechanical keyboard with vibrant RGB and silent switches."
+	},
+	{
+	  "id": "p7",
+	  "name": "1080p Webcam",
+	  "slug": "1080p-webcam",
+	  "price": 45.99,
+	  "image": "/EMEET 1080P Webcam with Microphone, C960 Web….jpeg",
+	  "description": "Stream or conference in full HD with autofocus and built-in mic."
+	},
+	{
+	  "id": "p8",
+	  "name": "USB-C Charger",
+	  "slug": "usb-c-charger",
+	  "price": 29.99,
+	  "image": "/USB-C-Charger.jpeg",
+	  "description": "Fast charging USB-C wall charger with multiple output ports."
+	}
+  ]
+  
