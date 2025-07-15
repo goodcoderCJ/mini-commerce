@@ -20,7 +20,7 @@ export default function Navbar() {
           <Link href="/cart" className="hover:text-blue-600 relative">
             Cart
             {cartCount > 0 && (
-              <span className="ml-1 text-xs bg-red-600 text-white rounded-full px-2 py-0.5">
+              <span className="ml-1 text-xs bg-red-600 text-white font-bold rounded-full px-2 py-0.5">
                 {cartCount}
               </span>
             )}

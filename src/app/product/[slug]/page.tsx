@@ -5,19 +5,20 @@ import { notFound } from 'next/navigation'
 import { useProducts } from '../../_hooks/useProducts';
 import { useCartStore } from '../../_lib/zustandStore';
 import Image from 'next/image';
+import { useParams } from "next/navigation";
 
-interface Props {
-  params: { slug: string }
-}
 
-export default function ProductDetail({ params }: Props) {
-  const { data, isLoading, error } = useProducts()
-  const addToCart = useCartStore((state) => state.addToCart)
+
+export default function ProductDetail() {
+  const { data, isLoading, error } = useProducts();
+  const addToCart = useCartStore((state) => state.addToCart);
+  const params = useParams();
+  const productSlug = params.slug as string;
 
   if (isLoading) return <div className="p-4">Loading product...</div>
   if (error || !data) return <div className="p-4 text-red-500">Failed to load product.</div>
 
-  const product = data.find((p) => p.slug === params.slug)
+  const product = data.find((p) => p.slug === productSlug)
   if (!product) return notFound()
 
   const handleAddToCart = () => {

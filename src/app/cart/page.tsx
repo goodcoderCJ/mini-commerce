@@ -67,7 +67,7 @@ export default function CartPage() {
         <h3 className="text-xl font-semibold mb-2">Subtotal: ${subtotal.toFixed(2)}</h3>
         <Link
           href="/checkout"
-          className="bg-green-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+          className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
         >
           Proceed to Checkout
         </Link>
