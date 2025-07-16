@@ -1,4 +1,6 @@
-# 🛒 Mini-Commerce
+# Project Oveview
+
+## 🛒 Mini-Commerce
 
 A client-side e-commerce prototype built with **Next.js 14 App Router**, **React**, **React Query**, **Zustand**, **Tailwind CSS**, and **TypeScript**. This lightweight shop allows users to browse products, manage a cart, and complete a mock checkout — all **persisted in localStorage**.
 
@@ -20,6 +22,16 @@ A client-side e-commerce prototype built with **Next.js 14 App Router**, **React
 | Mobile Friendly  | Tailwind responsive design + accessibility friendly |
 
 ---
+
+## Design Approach
+
+Layout : Used grid layout while also including flexbox (all created using TailwindCss grid utility class and flex utility classes)
+Color : Catalogue background - bg-white, button - bg-blue-600, cart-update-background : bg-red-600 (all done using TailwindCss);
+Responsiveness: Responsiveness is carried out using responsive utility variants to build adaptative user interface. This is achieved by adding the breakpoint. Eg sm:, md: lg:, xl:, 2xl:
+
+## SEO Stratedy
+
+SEO was carried out using Nextjs Metadata
 
 ## Tech Stack
 
