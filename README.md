@@ -72,7 +72,7 @@ Edit
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-username/mini-commerce.git
+git clone https://github.com/goodcoderCJ/mini-commerce.git
 cd mini-commerce
 2. Install Dependencies
 
