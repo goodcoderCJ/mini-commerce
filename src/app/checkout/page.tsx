@@ -4,6 +4,7 @@
 import { useRouter } from 'next/navigation'
 import { useCartStore } from '../_lib/zustandStore';
 import Link from 'next/link';
+import { Suspense } from 'react'
 
 export default function CheckoutPage() {
   const router = useRouter()
@@ -24,6 +25,7 @@ export default function CheckoutPage() {
   }
 
   return (
+   <Suspense>
     <div className="max-w-3xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-6">Checkout</h1>
       <ul className="divide-y">
@@ -44,5 +46,6 @@ export default function CheckoutPage() {
         </button>
       </div>
     </div>
+    </Suspense>
   )
 }

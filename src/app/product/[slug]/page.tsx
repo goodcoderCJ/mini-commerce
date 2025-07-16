@@ -18,7 +18,7 @@ export default function ProductDetail() {
   if (isLoading) return <div className="p-4">Loading product...</div>
   if (error || !data) return <div className="p-4 text-red-500">Failed to load product.</div>
 
-  const product = data.find((p) => p.slug === productSlug)
+  const product = data.find((p) => p.slug === productSlug.toString())
   if (!product) return notFound()
 
   const handleAddToCart = () => {

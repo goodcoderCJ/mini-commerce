@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 Mini-Commerce
 
-## Getting Started
+A client-side e-commerce prototype built with **Next.js 14 App Router**, **React**, **React Query**, **Zustand**, **Tailwind CSS**, and **TypeScript**. This lightweight shop allows users to browse products, manage a cart, and complete a mock checkout — all **persisted in localStorage**.
 
-First, run the development server:
+---
+
+## Features
+
+| Feature            | Description |
+|--------------------|-------------|
+| Product Catalog  | Browse products from `products.json` via React Query |
+| Product Detail   | `/product/[slug]` page for individual product view |
+| Cart             | `/cart` page with add/remove/update support using Zustand |
+| Checkout Flow    | `/checkout` and `/checkout/success` mock checkout & thank you page |
+| Dark Mode      | Toggle with Zustand + Tailwind `dark` mode |
+| Filters          | Filter by category and price range on homepage |
+| Persistent State | All state is stored in `localStorage` for offline & reload survival |
+| Testing          | Jest + RTL example test for component |
+| Deployed         | Vercel-ready for instant live preview |
+| Mobile Friendly  | Tailwind responsive design + accessibility friendly |
+
+---
+
+## Tech Stack
+
+- **Next.js 14 (App Router)**
+- **React 18**
+- **React Query** – For product data fetching/caching
+- **Zustand** – Cart and theme state management (with localStorage persistence)
+- **Tailwind CSS** – Utility-first styling
+- **TypeScript** – Strict mode, full type safety
+- **Jest + RTL** – Component unit testing
+
+---
+
+## Project Structure
+
+mini-commerce/
+├── app/ # App Router pages
+│ ├── layout.tsx # Root layout
+│ ├── page.tsx # Home/catalog
+│ ├── cart/page.tsx # Cart page
+│ ├── checkout/page.tsx # Checkout summary
+│ └── checkout/success/ # Thank you page
+├── components/ # Reusable UI components
+│ ├── Navbar.tsx
+│ ├── ProductCard.tsx
+│ └── FilterPanel.tsx
+├── lib/
+│ ├── zustandStore.ts # Cart state
+│ ├── themeStore.ts # Theme state
+│ └── QueryProvider.tsx # React Query client
+├── hooks/
+│ └── useProducts.ts # Fetch + seed products
+├── public/
+│ └── data/products.json # Mock product data
+├── tests/
+│ └── ProductCard.test.tsx
+├── jest.setup.ts
+├── tailwind.config.js
+├── tsconfig.json
+└── README.md # You're here!
+
+yaml
+Copy
+Edit
+
+---
+
+## 🔧 Getting Started
+
+### 1. Clone the Repo
 
 ```bash
+git clone https://github.com/your-username/mini-commerce.git
+cd mini-commerce
+2. Install Dependencies
+
+npm install
+3. Run the Dev Server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+App should now be running at http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+✅ Scripts
+Script	Description
+npm run dev Start dev server
+npm run build Build for production
+npm run lint Run ESLint
+npm run format Prettier formatting
+npm run test Run Jest tests
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🧪 Example Test
+I’ve included one unit test:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+__tests__/ProductCard.test.tsx
+To run tests:
+npm run test
 
-To learn more about Next.js, take a look at the following resources:
+🌍 Deployment
+Ready to deploy to Vercel:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Push code to GitHub
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Import repo in Vercel
 
-## Deploy on Vercel
+Set no special env vars (all localStorage)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🎯 Future Enhancements
+ Product search
+
+ Wishlist functionality
+
+ User auth / protected checkout
+
+ Order history page
+
+ Real API backend integration
+
+🙌 Credits
+Built with ❤️ using:
+
+Next.js
+
+Tailwind CSS
+
+Zustand
+
+React Query
+
+📄 License
+This project is open-source and available under the MIT License.
+
+Demo: https://mini-commerce.vercel.app
