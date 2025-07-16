@@ -1,19 +1,21 @@
 'use client'
 
 import { useSearchParams } from 'next/navigation'
-import { useEffect } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useCartStore } from '../../_lib/zustandStore';
 import Link from 'next/link';
 
 
-export default function SuccessPage() {
+function SuccessPageContent() {
+  const [orderId, setOrderId] = useState<string | null>(null)
   const searchParams = useSearchParams()
-  const orderId = searchParams.get('order')
   const clearCart = useCartStore((state) => state.clearCart)
 
   useEffect(() => {
     clearCart()
-  }, [clearCart])
+    const order = searchParams.get('order') || Math.floor(Math.random() * 1000000).toString()
+    setOrderId(order);
+  }, [clearCart, searchParams])
 
   return (
 
@@ -29,5 +31,14 @@ export default function SuccessPage() {
       </Link>
       </div>
      
+  )
+}
+
+
+export default function SuccessPage() {
+  return (
+    <Suspense fallback={<div className="text-center py-20">Loading order details...</div>}>
+      <SuccessPageContent />
+    </Suspense>
   )
 }
