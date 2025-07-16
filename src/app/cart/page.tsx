@@ -2,8 +2,9 @@
 'use client'
 
 import { useCartStore } from '../_lib/zustandStore'
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
+import { Suspense } from 'react';
 
 export default function CartPage() {
   const items = useCartStore((state) => state.items)
@@ -24,6 +25,7 @@ export default function CartPage() {
   }
 
   return (
+    <Suspense>
     <div className="max-w-5xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-6">Your Cart</h1>
       <div className="space-y-4">
@@ -72,6 +74,7 @@ export default function CartPage() {
           Proceed to Checkout
         </Link>
       </div>
-    </div>
+      </div>
+      </Suspense>
   )
 }

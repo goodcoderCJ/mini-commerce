@@ -4,7 +4,7 @@ import { useSearchParams } from 'next/navigation'
 import { useEffect } from 'react'
 import { useCartStore } from '../../_lib/zustandStore';
 import Link from 'next/link';
-import { Suspense } from 'react';
+
 
 export default function SuccessPage() {
   const searchParams = useSearchParams()
@@ -16,7 +16,7 @@ export default function SuccessPage() {
   }, [clearCart])
 
   return (
-    <Suspense>
+
     <div className="p-8 text-center">
       <h1 className="text-3xl font-bold text-green-600 mb-4">Thank You!</h1>
       <p className="text-lg">Your order has been placed successfully.</p>
@@ -28,6 +28,6 @@ export default function SuccessPage() {
         Continue Shopping
       </Link>
       </div>
-      </Suspense>
+     
   )
 }
