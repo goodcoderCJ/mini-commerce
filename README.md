@@ -12,8 +12,8 @@ A client-side e-commerce prototype built with **Next.js 14 App Router**, **React
 | Product Detail   | `/product/[slug]` page for individual product view |
 | Cart             | `/cart` page with add/remove/update support using Zustand |
 | Checkout Flow    | `/checkout` and `/checkout/success` mock checkout & thank you page |
-| Dark Mode      | Toggle with Zustand + Tailwind `dark` mode |
-| Filters          | Filter by category and price range on homepage |
+| Dark Mode      | Toggle with Zustand + Tailwind `dark` mode, yet to be added|
+| Filters          | Filter by category and price range on homepage, yet to be added|
 | Persistent State | All state is stored in `localStorage` for offline & reload survival |
 | Testing          | Jest + RTL example test for component |
 | Deployed         | Vercel-ready for instant live preview |
@@ -61,10 +61,6 @@ mini-commerce/
 ├── tsconfig.json
 └── README.md # You're here!
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 🔧 Getting Started
@@ -90,7 +86,7 @@ npm run lint Run ESLint
 npm run format Prettier formatting
 npm run test Run Jest tests
 
-🧪 Example Test
+Example Test
 I’ve included one unit test:
 
 
@@ -98,7 +94,7 @@ __tests__/ProductCard.test.tsx
 To run tests:
 npm run test
 
-🌍 Deployment
+Deployment
 Ready to deploy to Vercel:
 
 Push code to GitHub
@@ -109,7 +105,7 @@ Set no special env vars (all localStorage)
 
 Deploy!
 
-🎯 Future Enhancements
+Future Enhancements
  Product search
 
  Wishlist functionality
@@ -120,7 +116,7 @@ Deploy!
 
  Real API backend integration
 
-🙌 Credits
+Credits
 Built with ❤️ using:
 
 Next.js
@@ -134,4 +130,4 @@ React Query
 📄 License
 This project is open-source and available under the MIT License.
 
-Demo: https://mini-commerce.vercel.app
+Demo: https://mini-commerce-one-dusky.vercel.app
